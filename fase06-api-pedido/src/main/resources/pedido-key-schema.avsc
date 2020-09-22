@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "name": "PedidoKey",
+    "namespace": "com.fiap.fase06.grupo10.apipedido.broker.schema",
+    "fields": [
+     {
+        "name": "id",
+        "type": "string"
+    }]
+}

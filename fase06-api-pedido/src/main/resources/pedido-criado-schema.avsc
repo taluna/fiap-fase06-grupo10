@@ -1,0 +1,27 @@
+{
+    "type": "record",
+    "name": "PedidoCriado",
+    "namespace": "com.fiap.fase06.grupo10.apipedido.broker.schema",
+    "fields": [
+    {
+        "name": "id",
+        "type": "string"
+    },
+    {
+        "name": "valorTotal",
+        "type": "double"
+    },
+    {
+        "name": "status",
+        "type": "string"
+    },
+    {
+        "name": "clienteId",
+        "type": "string"
+    },
+    {
+        "name": "pagamentoId",
+        "type": "string"
+    }
+    ]
+}
