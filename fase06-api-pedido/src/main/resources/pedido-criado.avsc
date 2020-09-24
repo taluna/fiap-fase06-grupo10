@@ -1,0 +1,34 @@
+{
+	"type": "record",
+	"name": "PedidoCriado",
+	"namespace": "com.fiap.fase06.grupo10.apipedido.broker.schema",
+	"fields": [
+        {
+            "name": "id",
+            "type": "string",
+            "avro.java.string": "String"
+        },
+        {
+            "name": "clienteId",
+            "type": "string",
+            "avro.java.string": "String"
+        },
+        {
+            "name": "restauranteId",
+            "type": "string",
+            "avro.java.string": "String"
+        },
+        {
+            "name": "date",
+            "type": {
+                "type": "long",
+                 "logicalType": "timestamp-millis"
+            }
+        },
+        {
+            "name": "status",
+            "type": "string",
+             "avro.java.string": "String"
+        }
+	]
+}

@@ -1,5 +1,6 @@
 package com.fiap.fase06.grupo10.apipedido.service;
 
+import com.fiap.fase06.grupo10.apipedido.broker.Producer;
 import com.fiap.fase06.grupo10.apipedido.controller.CriarPedidoRequestDTO;
 import com.fiap.fase06.grupo10.apipedido.controller.CriarPedidoResponseDTO;
 import com.fiap.fase06.grupo10.apipedido.controller.PedidoDTO;
@@ -17,9 +18,11 @@ import java.util.List;
 public class PedidoService {
 
     private final PedidoRepository pedidoRepository;
+    private final Producer producer;
 
-    public PedidoService(PedidoRepository pedidoRepository){
+    public PedidoService(PedidoRepository pedidoRepository, Producer producer){
         this.pedidoRepository = pedidoRepository;
+        this.producer = producer;
     }
 
     public CriarPedidoResponseDTO criarPedido(CriarPedidoRequestDTO pedidoDTO) {
@@ -27,6 +30,7 @@ public class PedidoService {
         BeanUtils.copyProperties(pedidoDTO, pedido);
         pedido.setStatus(StatusPedido.PROCESSADO.getName());
         Pedido pedidoCriado = pedidoRepository.save(pedido);
+        producer.enviarPedido(pedidoCriado);
         return new CriarPedidoResponseDTO(pedidoCriado.getId(), pedidoCriado.getStatus());
     }
 

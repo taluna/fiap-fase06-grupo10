@@ -1,8 +1,35 @@
 server:
   port: 8080
 
+topic:
+  name: pedido
+  partitions-num: 3
+  replication-factor: 1
+
 spring:
+  kafka:
+    bootstrap-servers:
+      - localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8181
+    consumer:
+      group-id: pedido-1
+      auto-offset-reset: latest
+      key-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor
+    producer:
+      key-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor
+    template:
+      default-topic:
   data:
     mongodb:
       uri: mongodb://root:root@localhost:27017/pedido?authSource=admin
 
+logging:
+  level:
+    root: info
