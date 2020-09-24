@@ -6,7 +6,9 @@
 
 #### Subir a aplicação e suas dependências
 
-```docker-compose up -d```
+```make start```
+
+#### Criar a collection "pedidos" no MongoDB
 
 #### Pedido
 
