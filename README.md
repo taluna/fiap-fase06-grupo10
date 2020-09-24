@@ -8,11 +8,11 @@
 
 ```make start```
 
-#### Criar a collection "pedidos" no MongoDB
+#### Criar a collection ```pedidos``` no MongoDB
 
 #### Testar aplicação
 
-Olhar os exemplos das requisiçoes no scratch fiap-fase06-pedido.http (usado como cliente REST no IntelliJ)
+Olhar os exemplos das requisiçoes no scratch ```fiap-fase06-pedido.http``` (usado como cliente REST no IntelliJ)
 
 #### Statk utilizada
 
