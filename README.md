@@ -10,9 +10,9 @@
 
 #### Criar a collection "pedidos" no MongoDB
 
-#### Pedido
+#### Testar aplicação
 
-Endpoint para criar pedido http://localhost:8080/pedidos
+Olhar os exemplos das requisiçoes no scratch fiap-fase06-pedido.http (usado como cliente REST no IntelliJ)
 
 #### Statk utilizada
 
