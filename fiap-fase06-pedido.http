@@ -1,0 +1,28 @@
+GET http://localhost:8080/api/v1/pedidos
+
+###
+POST http://localhost:8080/api/v1/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": "1234343",
+  "cep": "40.000-000",
+  "restauranteId": "2131243",
+  "pagamentoId": "76567",
+  "items": [
+    {
+    "descricao": "Sanduiche",
+    "quantidade": 1,
+    "precoUnitario": 15.00
+  },
+    {
+      "descricao": "Coca-cola 2L",
+      "quantidade": 2,
+      "precoUnitario": 20.00
+    }
+  ]
+
+
+
+
+}
