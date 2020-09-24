@@ -3,6 +3,8 @@ package com.fiap.fase06.grupo10.apipedido.controller;
 import com.fiap.fase06.grupo10.apipedido.service.PedidoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,4 +26,9 @@ public class PedidoController {
         return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
     }
 
+    @GetMapping
+    public ResponseEntity listarPedidos() {
+        VerPedidoResponse responseDTO = pedidoService.listarPedidos();
+        return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
+    }
 }

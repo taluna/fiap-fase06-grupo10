@@ -1,14 +1,13 @@
 package com.fiap.fase06.grupo10.apipedido;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.config.Configuration;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.messaging.Processor;
-import org.springframework.cloud.stream.schema.client.EnableSchemaRegistryClient;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableBinding(Processor.class)
-@EnableSchemaRegistryClient
 public class ApiPedidoApplication {
 
     public static void main(String[] args) {

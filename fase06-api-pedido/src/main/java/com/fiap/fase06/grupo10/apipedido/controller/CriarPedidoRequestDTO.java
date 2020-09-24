@@ -14,5 +14,5 @@ public class CriarPedidoRequestDTO {
     private String endereco;
     private String restauranteId;
     private String pagamentoId;
-    private List<ItemPedido> items;
+    private List<ItemPedidoDTO> items;
 }

@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class ItemPedido {
-    private String codigo;
+    private String descricao;
     private Integer quantidade;
     private Double precoUnitario;
 
