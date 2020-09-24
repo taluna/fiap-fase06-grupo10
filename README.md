@@ -1,4 +1,4 @@
-# fiap-fase06-grupo10
+# fiap-fase06-grupo10 - Microservice Pedido
 
 #### Realizar o build do projeto
 
